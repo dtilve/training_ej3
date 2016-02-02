@@ -8,20 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		618D70021C60E58D0094E8A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618D70011C60E58D0094E8A7 /* AppDelegate.swift */; };
-		618D70041C60E58D0094E8A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618D70031C60E58D0094E8A7 /* ViewController.swift */; };
+		618D70041C60E58D0094E8A7 /* ContactsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618D70031C60E58D0094E8A7 /* ContactsTableView.swift */; };
 		618D70071C60E58D0094E8A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618D70051C60E58D0094E8A7 /* Main.storyboard */; };
 		618D70091C60E58D0094E8A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618D70081C60E58D0094E8A7 /* Assets.xcassets */; };
 		618D700C1C60E58D0094E8A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618D700A1C60E58D0094E8A7 /* LaunchScreen.storyboard */; };
+		618D70161C60FC3B0094E8A7 /* ContactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618D70151C60FC3B0094E8A7 /* ContactCardView.swift */; };
+		61DDBB3B1C610469000165C5 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DDBB3A1C610469000165C5 /* ReactiveCocoa.framework */; };
+		61DDBB3D1C61046D000165C5 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DDBB3C1C61046D000165C5 /* Result.framework */; };
+		61DDBB3F1C610471000165C5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DDBB3E1C610471000165C5 /* Realm.framework */; };
+		61DDBB411C610473000165C5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DDBB401C610473000165C5 /* RealmSwift.framework */; };
+		61DDBB431C6106B9000165C5 /* ContactCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DDBB421C6106B9000165C5 /* ContactCardModel.swift */; };
+		61DDBB461C6141CD000165C5 /* ContactsTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DDBB451C6141CD000165C5 /* ContactsTableModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		618D6FFE1C60E58D0094E8A7 /* ej3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ej3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		618D70011C60E58D0094E8A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		618D70031C60E58D0094E8A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		618D70031C60E58D0094E8A7 /* ContactsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableView.swift; sourceTree = "<group>"; };
 		618D70061C60E58D0094E8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		618D70081C60E58D0094E8A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		618D700B1C60E58D0094E8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		618D700D1C60E58D0094E8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		618D70151C60FC3B0094E8A7 /* ContactCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCardView.swift; sourceTree = "<group>"; };
+		61DDBB3A1C610469000165C5 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		61DDBB3C1C61046D000165C5 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		61DDBB3E1C610471000165C5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		61DDBB401C610473000165C5 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		61DDBB421C6106B9000165C5 /* ContactCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCardModel.swift; sourceTree = "<group>"; };
+		61DDBB451C6141CD000165C5 /* ContactsTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61DDBB3B1C610469000165C5 /* ReactiveCocoa.framework in Frameworks */,
+				61DDBB3F1C610471000165C5 /* Realm.framework in Frameworks */,
+				61DDBB411C610473000165C5 /* RealmSwift.framework in Frameworks */,
+				61DDBB3D1C61046D000165C5 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +58,10 @@
 			children = (
 				618D70001C60E58D0094E8A7 /* ej3 */,
 				618D6FFF1C60E58D0094E8A7 /* Products */,
+				61DDBB401C610473000165C5 /* RealmSwift.framework */,
+				61DDBB3E1C610471000165C5 /* Realm.framework */,
+				61DDBB3C1C61046D000165C5 /* Result.framework */,
+				61DDBB3A1C610469000165C5 /* ReactiveCocoa.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +77,14 @@
 			isa = PBXGroup;
 			children = (
 				618D70011C60E58D0094E8A7 /* AppDelegate.swift */,
-				618D70031C60E58D0094E8A7 /* ViewController.swift */,
 				618D70051C60E58D0094E8A7 /* Main.storyboard */,
 				618D70081C60E58D0094E8A7 /* Assets.xcassets */,
 				618D700A1C60E58D0094E8A7 /* LaunchScreen.storyboard */,
 				618D700D1C60E58D0094E8A7 /* Info.plist */,
+				618D70031C60E58D0094E8A7 /* ContactsTableView.swift */,
+				61DDBB451C6141CD000165C5 /* ContactsTableModel.swift */,
+				618D70151C60FC3B0094E8A7 /* ContactCardView.swift */,
+				61DDBB421C6106B9000165C5 /* ContactCardModel.swift */,
 			);
 			path = ej3;
 			sourceTree = "<group>";
@@ -74,6 +99,7 @@
 				618D6FFA1C60E58D0094E8A7 /* Sources */,
 				618D6FFB1C60E58D0094E8A7 /* Frameworks */,
 				618D6FFC1C60E58D0094E8A7 /* Resources */,
+				61DDBB441C610FA1000165C5 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -130,12 +156,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		61DDBB441C610FA1000165C5 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		618D6FFA1C60E58D0094E8A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				618D70041C60E58D0094E8A7 /* ViewController.swift in Sources */,
+				61DDBB431C6106B9000165C5 /* ContactCardModel.swift in Sources */,
+				61DDBB461C6141CD000165C5 /* ContactsTableModel.swift in Sources */,
+				618D70161C60FC3B0094E8A7 /* ContactCardView.swift in Sources */,
+				618D70041C60E58D0094E8A7 /* ContactsTableView.swift in Sources */,
 				618D70021C60E58D0094E8A7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +297,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ej3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dtilve.ej3;
@@ -258,6 +312,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ej3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dtilve.ej3;
@@ -284,6 +342,7 @@
 				618D70121C60E58D0094E8A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
