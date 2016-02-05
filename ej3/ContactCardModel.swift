@@ -10,22 +10,25 @@ import Foundation
 import RealmSwift
 import Contacts
 
-class ContactCardModel : Object {
-    var name : String = ""
-    var phoneNumber : String = ""
-    var email : String = ""
-    var favorite : Bool = false
-    var image = NSData()
+struct Contact {
+    
+    let identifier: String
+    let name : String
+    let phoneNumber : String
+    let email : String
+    let favorite : Bool
+    let image = NSData()
+
 }
 
-extension ContactCardModel {
+extension Contact {
     
-    convenience init(contact: CNContact) {
-        self.init()
+    init(contact: CNContact, favorite : Bool = false) {
+        self.identifier = contact.identifier
         self.name = "\(contact.givenName) \(contact.middleName) \(contact.familyName)"
         self.phoneNumber = extractFirstPhoneNumber(contact) ?? ""
         self.email = extractFirstEmail(contact) ?? ""
-        self.favorite = false
+        self.favorite = favorite
     }
     
 }

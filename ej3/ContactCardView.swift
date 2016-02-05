@@ -17,5 +17,5 @@ class ContactTableViewCell : UITableViewCell {
     @IBOutlet weak var contactEmail: UILabel!
     
     @IBOutlet weak var addFavButton: UIButton!
-
+    
 }

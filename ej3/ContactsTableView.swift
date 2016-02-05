@@ -10,131 +10,51 @@ import UIKit
 import Contacts
 import RealmSwift
 
-class CustomViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+final class CustomViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var contacts: [ContactCardModel] = []
-    var favorites : [ContactCardModel] = []
+    private var contactListViewModel = ContactListViewModel()
     
     @IBOutlet weak var contactTableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        favorites = retrieveFavs(contacts)
         
         contactTableView.delegate = self
         contactTableView.dataSource = self
-        
-        contacts = getAddressBook().map(ContactCardModel.init)
-        contactTableView.reloadData()
-        
-    }
     
-    @IBAction func addToFavs(sender: UIButton) {
-        if (!contacts[sender.tag].favorite) {
-            contacts[sender.tag].favorite = true
-            let newFavorite = contacts[sender.tag]
-            favorites.append(newFavorite)
+        contactListViewModel.reloadContactList.startWithNext { [unowned self]_ in
+            print("Reloading contact list table")
+            self.contactTableView.reloadData()
         }
+        contactListViewModel.fetchContacts.apply("").start()
     }
     
     @IBAction func swapTableView(sender: AnyObject) {
-        contactTableView.reloadData()
+        if let filter = FilterType(index: segmentedControl.selectedSegmentIndex) {
+            contactListViewModel.activeFilter.value = filter
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    func getAddressBook() -> [CNContact]{
-        
-        var contacts = [CNContact]()
-        let store = CNContactStore()
-        let keysToFetch = [CNContactFormatter.descriptorForRequiredKeysForStyle(.FullName),
-            CNContactPhoneNumbersKey, CNContactEmailAddressesKey,
-            CNContactThumbnailImageDataKey]
-        let fetchRequest = CNContactFetchRequest(keysToFetch: keysToFetch)
-        do
-        {
-            try store.enumerateContactsWithFetchRequest(fetchRequest, usingBlock:
-                { (let contact, let stop) -> Void in
-                    contacts.append(contact)
-                })
-        }
-        catch let error as NSError
-        {
-            print(error.localizedDescription)
-        }
-        return contacts
-    }
+    // TABLEVIEW METHODS
     
     func tableView (tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        var rows : Int = 0
-       
-        switch (segmentedControl.selectedSegmentIndex){
-            case 0 :
-            rows = contacts.count
-            case 1 :
-            rows = favorites.count
-            default : break
-        }
-        return rows
+        let count = contactListViewModel.countForActiveFilter
+        print("Table count \(count)")
+        return count
     }
 
-    
     func tableView (tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
         let contactCell = tableView.dequeueReusableCellWithIdentifier("ContactCell", forIndexPath: indexPath) as! ContactTableViewCell
-
-        switch(segmentedControl.selectedSegmentIndex){
-            case 0 :
-                let contact = contacts[indexPath.row]
-                contactCell.contactName.text = contact.name
-                contactCell.contactPhoneNumber.text = contact.phoneNumber
-                contactCell.contactEmail.text = contact.email
-                contactCell.addFavButton.tag = indexPath.row
-            case 1 :
-                let favorite = favorites[indexPath.row]
-                contactCell.contactName.text = favorite.name
-                contactCell.contactPhoneNumber.text = favorite.phoneNumber
-                contactCell.contactEmail.text = favorite.email
-                contactCell.addFavButton.tag = indexPath.row
-            default : break
-        }
-        return contactCell
+        let contact = contactListViewModel[indexPath.row]
+        
+        contactCell.contactName.text = contact.name
+        contactCell.contactPhoneNumber.text = contact.phone
+        contactCell.contactEmail.text = contact.email
+        contactCell.addFavButton.rex_pressed.value = contact.favorite.unsafeCocoaAction
+        
+        return contactCell 
     }
-    
-    func retrieveFavs(contacts: [ContactCardModel]) -> [ContactCardModel]{
-        var favorites = [ContactCardModel]()
-        for contact in contacts {
-            if contact.favorite {
-                favorites.append(contact)
-            }
-        }
-        return favorites
-    }
-    
-}
 
-
-/*  func makeItRealm(addressBook : [CNContact]) -> Results<ContactCardModel> {
-let realm = try! Realm()
-for contact in addressBook {
-let newContact = ContactCardModel()
-newContact.name = contact.givenName + " " + contact.familyName
-newContact.phoneNumber = (contact.phoneNumbers.first?.valueForKey("value")?.stringValue)!
-if (contact.emailAddresses.first != nil){
-newContact.email = (contact.emailAddresses.first?.value as! NSString) as String
 }
-print(newContact.name)
-print(newContact.phoneNumber)
-print(newContact.email)
-
-try! realm.write() {
-realm.add(newContact)
-}
-}
-return realm.objects(ContactCardModel)
-}*/

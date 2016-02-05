@@ -7,21 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		615326FA1C63AB23001BEFCC /* rex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 615326F91C63AB23001BEFCC /* rex.framework */; };
 		618D70021C60E58D0094E8A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618D70011C60E58D0094E8A7 /* AppDelegate.swift */; };
 		618D70041C60E58D0094E8A7 /* ContactsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618D70031C60E58D0094E8A7 /* ContactsTableView.swift */; };
 		618D70071C60E58D0094E8A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618D70051C60E58D0094E8A7 /* Main.storyboard */; };
 		618D70091C60E58D0094E8A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618D70081C60E58D0094E8A7 /* Assets.xcassets */; };
 		618D700C1C60E58D0094E8A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618D700A1C60E58D0094E8A7 /* LaunchScreen.storyboard */; };
 		618D70161C60FC3B0094E8A7 /* ContactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618D70151C60FC3B0094E8A7 /* ContactCardView.swift */; };
+		618E4AA51C6544C500889EC5 /* PhoneAddressBookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618E4AA41C6544C500889EC5 /* PhoneAddressBookService.swift */; };
+		618E4AA71C6544EF00889EC5 /* ContactStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618E4AA61C6544EF00889EC5 /* ContactStore.swift */; };
+		61B55AB71C624209001B614C /* ContactsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B55AB61C624209001B614C /* ContactsTableViewModel.swift */; };
+		61B55AB91C62421A001B614C /* ContactCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B55AB81C62421A001B614C /* ContactCardViewModel.swift */; };
 		61DDBB3B1C610469000165C5 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DDBB3A1C610469000165C5 /* ReactiveCocoa.framework */; };
 		61DDBB3D1C61046D000165C5 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DDBB3C1C61046D000165C5 /* Result.framework */; };
 		61DDBB3F1C610471000165C5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DDBB3E1C610471000165C5 /* Realm.framework */; };
 		61DDBB411C610473000165C5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DDBB401C610473000165C5 /* RealmSwift.framework */; };
 		61DDBB431C6106B9000165C5 /* ContactCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DDBB421C6106B9000165C5 /* ContactCardModel.swift */; };
-		61DDBB461C6141CD000165C5 /* ContactsTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DDBB451C6141CD000165C5 /* ContactsTableModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		615326F91C63AB23001BEFCC /* rex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = rex.framework; path = Carthage/Build/iOS/rex.framework; sourceTree = "<group>"; };
 		618D6FFE1C60E58D0094E8A7 /* ej3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ej3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		618D70011C60E58D0094E8A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		618D70031C60E58D0094E8A7 /* ContactsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableView.swift; sourceTree = "<group>"; };
@@ -30,12 +35,15 @@
 		618D700B1C60E58D0094E8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		618D700D1C60E58D0094E8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		618D70151C60FC3B0094E8A7 /* ContactCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCardView.swift; sourceTree = "<group>"; };
+		618E4AA41C6544C500889EC5 /* PhoneAddressBookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneAddressBookService.swift; sourceTree = "<group>"; };
+		618E4AA61C6544EF00889EC5 /* ContactStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactStore.swift; sourceTree = "<group>"; };
+		61B55AB61C624209001B614C /* ContactsTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewModel.swift; sourceTree = "<group>"; };
+		61B55AB81C62421A001B614C /* ContactCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCardViewModel.swift; sourceTree = "<group>"; };
 		61DDBB3A1C610469000165C5 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		61DDBB3C1C61046D000165C5 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		61DDBB3E1C610471000165C5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		61DDBB401C610473000165C5 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		61DDBB421C6106B9000165C5 /* ContactCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCardModel.swift; sourceTree = "<group>"; };
-		61DDBB451C6141CD000165C5 /* ContactsTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,7 @@
 				61DDBB3B1C610469000165C5 /* ReactiveCocoa.framework in Frameworks */,
 				61DDBB3F1C610471000165C5 /* Realm.framework in Frameworks */,
 				61DDBB411C610473000165C5 /* RealmSwift.framework in Frameworks */,
+				615326FA1C63AB23001BEFCC /* rex.framework in Frameworks */,
 				61DDBB3D1C61046D000165C5 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,6 +67,7 @@
 			children = (
 				618D70001C60E58D0094E8A7 /* ej3 */,
 				618D6FFF1C60E58D0094E8A7 /* Products */,
+				615326F91C63AB23001BEFCC /* rex.framework */,
 				61DDBB401C610473000165C5 /* RealmSwift.framework */,
 				61DDBB3E1C610471000165C5 /* Realm.framework */,
 				61DDBB3C1C61046D000165C5 /* Result.framework */,
@@ -76,17 +86,52 @@
 		618D70001C60E58D0094E8A7 /* ej3 */ = {
 			isa = PBXGroup;
 			children = (
+				618E4AA31C6544A700889EC5 /* Services */,
+				61B55AB41C6241D3001B614C /* Model */,
+				61B55ABA1C624231001B614C /* ViewModel */,
+				61B55AB51C6241DB001B614C /* View */,
 				618D70011C60E58D0094E8A7 /* AppDelegate.swift */,
 				618D70051C60E58D0094E8A7 /* Main.storyboard */,
 				618D70081C60E58D0094E8A7 /* Assets.xcassets */,
 				618D700A1C60E58D0094E8A7 /* LaunchScreen.storyboard */,
 				618D700D1C60E58D0094E8A7 /* Info.plist */,
-				618D70031C60E58D0094E8A7 /* ContactsTableView.swift */,
-				61DDBB451C6141CD000165C5 /* ContactsTableModel.swift */,
-				618D70151C60FC3B0094E8A7 /* ContactCardView.swift */,
-				61DDBB421C6106B9000165C5 /* ContactCardModel.swift */,
 			);
 			path = ej3;
+			sourceTree = "<group>";
+		};
+		618E4AA31C6544A700889EC5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				618E4AA41C6544C500889EC5 /* PhoneAddressBookService.swift */,
+				618E4AA61C6544EF00889EC5 /* ContactStore.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		61B55AB41C6241D3001B614C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				61DDBB421C6106B9000165C5 /* ContactCardModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		61B55AB51C6241DB001B614C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				618D70031C60E58D0094E8A7 /* ContactsTableView.swift */,
+				618D70151C60FC3B0094E8A7 /* ContactCardView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		61B55ABA1C624231001B614C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				61B55AB61C624209001B614C /* ContactsTableViewModel.swift */,
+				61B55AB81C62421A001B614C /* ContactCardViewModel.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +212,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/rex.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -183,9 +229,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				61DDBB431C6106B9000165C5 /* ContactCardModel.swift in Sources */,
-				61DDBB461C6141CD000165C5 /* ContactsTableModel.swift in Sources */,
+				61B55AB71C624209001B614C /* ContactsTableViewModel.swift in Sources */,
 				618D70161C60FC3B0094E8A7 /* ContactCardView.swift in Sources */,
+				618E4AA51C6544C500889EC5 /* PhoneAddressBookService.swift in Sources */,
+				61B55AB91C62421A001B614C /* ContactCardViewModel.swift in Sources */,
 				618D70041C60E58D0094E8A7 /* ContactsTableView.swift in Sources */,
+				618E4AA71C6544EF00889EC5 /* ContactStore.swift in Sources */,
 				618D70021C60E58D0094E8A7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
